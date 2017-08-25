@@ -1,0 +1,90 @@
+[ 2017-08-24T11:38:47+08:00 ] ::1 /momo/Home/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `momo_member` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `momo_member` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' AND `status` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `momo_member` SET `login`=`login`+1,`last_login_time`='1503545927',`last_login_ip`='0' WHERE `uid` = 1 [ RunTime:0.0010s ]
+
+[ 2017-08-24T11:38:49+08:00 ] ::1 /momo/Home/Menu/config.html?node=root
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-24T11:38:49+08:00 ] ::1 /momo/Home/Menu/inquiry.html?node=root
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-24T11:38:49+08:00 ] ::1 /momo/Home/Menu/distribute.html?node=root
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-24T11:38:50+08:00 ] ::1 /momo/Home/User/getInfo.html?_dc=1503545929544&page=1&start=0&limit=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `momo_user` [ RunTime:0.2110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `momo_user` WHERE ( id>=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `momo_user` LIMIT 0,15   [ RunTime:0.0000s ]
+
+[ 2017-08-24T11:38:50+08:00 ] ::1 /momo/Home/ChartLine/getInfo.html?_dc=1503545929546&page=1&start=0&limit=25
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-24T11:38:50+08:00 ] ::1 /momo/Home/Grade/getInfo.html?_dc=1503545929545&page=1&start=0&limit=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `momo_grade` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `momo_grade` WHERE ( id>=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `momo_grade` LIMIT 0,15   [ RunTime:0.0010s ]
+
+[ 2017-08-24T11:38:50+08:00 ] ::1 /momo/Home/ChartBar/getInfo.html?_dc=1503545929546&page=1&start=0&limit=25
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-24T12:10:31+08:00 ] ::1 /momo/Home/Menu/config.html?node=root
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-24T12:10:31+08:00 ] ::1 /momo/Home/Menu/inquiry.html?node=root
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-24T12:10:31+08:00 ] ::1 /momo/Home/Menu/distribute.html?node=root
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-24T12:10:31+08:00 ] ::1 /momo/Home/User/getInfo.html?_dc=1503547831330&page=1&start=0&limit=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `momo_user` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `momo_user` WHERE ( id>=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `momo_user` LIMIT 0,15   [ RunTime:0.0010s ]
+
+[ 2017-08-24T12:10:31+08:00 ] ::1 /momo/Home/ChartLine/getInfo.html?_dc=1503547831331&page=1&start=0&limit=25
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-24T12:10:31+08:00 ] ::1 /momo/Home/Grade/getInfo.html?_dc=1503547831331&page=1&start=0&limit=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `momo_grade` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `momo_grade` WHERE ( id>=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `momo_grade` LIMIT 0,15   [ RunTime:0.0000s ]
+
+[ 2017-08-24T12:10:31+08:00 ] ::1 /momo/Home/ChartBar/getInfo.html?_dc=1503547831331&page=1&start=0&limit=25
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
