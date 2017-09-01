@@ -27,6 +27,18 @@ return array(
 	'DB_CHARSET'=> 'utf8', // 字符集
 	'DB_DEBUG'  =>  TRUE, // 数据库调试模式 开启后可以记录SQL日志 3.2.3新增
 	// 'DB_DSN' => 'mysql://root:root@localhost:3306/momo#utf8',
+
+	//数据库配置1
+	'DB_ACCOUNT' => array(
+		'db_type'  		=> 'mysql',
+		'db_user'  		=> 'root',
+		'db_pwd'   		=> 'root',
+		'db_host'  		=> '192.168.0.104',
+		'db_port'  		=> '3306',
+		'db_name'  		=> 'chuanqi_login',
+		'db_charset' 	=> 'utf8',
+		'db_debug'    	=> true,
+	),
 	
 	/* 模板相关配置 */
 	'TMPL_PARSE_STRING' => array(
