@@ -28,4 +28,12 @@ class MenuController extends Controller {
 		);
 		echo $this->ajaxReturn($data);
 	}
+
+	// 账号查询
+	public function account(){
+		$data["children"]=array(
+				array('text'=>'游戏账号管理','leaf'=>true,'xtypeClass'=>'accountList')
+		);
+		echo $this->ajaxReturn($data);
+	}
 }
