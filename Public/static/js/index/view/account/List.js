@@ -16,28 +16,24 @@ Ext.define('admin.view.account.List', {
             { header: '登录次数', dataIndex: 'loginCount', flex: 1 },
         ];
         this.tbar = [{
-                text: '新增用户',
-                action: 'accountAdd',
-                iconCls: 'Useradd'
-            }, '-', {
-                text: '删除用户',
-                action: 'accountDelete',
-                iconCls: 'Userdelete'
-            }, '-', {
-                xtype: 'textfield',
-                emptyText: '请输入查询关键词',
-                name: 'seakey'
-            }, {
-                text: '查询',
-                action: 'accountSearch',
-                iconCls: 'Zoom'
-            }],
-            this.bbar = Ext.create('Ext.PagingToolbar', {
-                store: this.store,
-                displayInfo: true,
-                displayMsg: '显示 {0} - {1} 条，共计 {2} 条',
-                emptyMsg: "没有数据"
-            });
+            text: '删除账号',
+            action: 'accountDelete',
+            iconCls: 'Userdelete'
+        }, '-', {
+            xtype: 'textfield',
+            emptyText: '请输入查询关键词',
+            name: 'seakey'
+        }, {
+            text: '查询',
+            action: 'accountSearch',
+            iconCls: 'Zoom'
+        }];
+        this.bbar = Ext.create('Ext.PagingToolbar', {
+            store: this.store,
+            displayInfo: true,
+            displayMsg: '显示 {0} - {1} 条，共计 {2} 条',
+            emptyMsg: "没有数据"
+        });
         this.callParent(arguments);
     }
 });

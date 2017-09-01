@@ -2,7 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class AccountController extends Controller {
-    public function addInfo(){
+    private function addInfo(){
 		$httpContent = file_get_contents('php://input', 'r');
 		$user=M('user');
 		if($user->add((array)json_decode($httpContent)))
@@ -36,8 +36,10 @@ class AccountController extends Controller {
 			$temp=(array)json_decode($val);
 			$ids=$ids.','.$temp['id'];
 		}
-		$user=M('user');
-		if($user->delete($ids))
+
+		$connection = C('DB_ACCOUNT');
+		$account=M('account', 'uw_', $connection);
+		if($account->delete($ids))
 		{
 			$data['success']=true;
 		}else{
@@ -48,8 +50,9 @@ class AccountController extends Controller {
 
 	public function editInfo(){
 		$httpContent = file_get_contents('php://input', 'r');
-		$user=M('user');
-		if($user->save((array)json_decode($httpContent)))
+		$connection = C('DB_ACCOUNT');
+		$account=M('account', 'uw_', $connection);
+		if($account->save((array)json_decode($httpContent)))
 		{
 			$data['success']=true;
 		}else{

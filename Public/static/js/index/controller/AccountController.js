@@ -11,7 +11,6 @@ Ext.define('admin.controller.AccountController', {
         this.control({
             'accountList': { itemdblclick: this.accountEdit },
             'accountEdit button[action=accountEditSave]': { click: this.accountEditSave },
-            'accountList button[action=accountAdd]': { click: this.accountAdd },
             'accountList button[action=accountDelete]': { click: this.accountDelete },
             'accountEdit button[action=accountEditClose]': { click: this.accountEditClose }
         });
@@ -19,9 +18,6 @@ Ext.define('admin.controller.AccountController', {
     accountEdit: function(grid, record) {
         var view = Ext.widget('accountEdit');
         view.down('form').loadRecord(record);
-    },
-    accountAdd: function(button) {
-        var view = Ext.widget('accountEdit');
     },
     accountEditSave: function(button) {
         var win = button.up('window'),
