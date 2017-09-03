@@ -17,10 +17,24 @@ class AccountController extends Controller {
 	public function getInfo(){	
 		$connection = C('DB_ACCOUNT');
 		$account=M('account', 'uw_', $connection);
-		$total=$account->count();
-		$data['totalCount']=$total;
 		$data['success']=true;
-		$data['data']=$account->limit(I('start').','.I('limit'))->select();
+
+		$seakey = I('seakey');
+		if ($seakey === '') {
+			$limit = I('limit');
+			$start = I('start');
+			if ($start < 0) {
+				$start = 0;
+			}
+
+			$total=$account->count();
+			$data['totalCount']=$total;
+			$data['data']=$account->limit($start.','.$limit)->select();
+		} else {
+			$data['data']=$account->where("name like '%".$seakey."%'")->select();
+			$data['totalCount']=count($data['data']);
+		}
+
 		echo $this->ajaxReturn($data);
     }
 	

@@ -10,8 +10,10 @@ Ext.define('admin.controller.AccountController', {
     init: function() {
         this.control({
             'accountList': { itemdblclick: this.accountEdit },
-            'accountEdit button[action=accountEditSave]': { click: this.accountEditSave },
             'accountList button[action=accountDelete]': { click: this.accountDelete },
+            'accountList button[action=accountSearch]': { click: this.accountSearch },
+
+            'accountEdit button[action=accountEditSave]': { click: this.accountEditSave },
             'accountEdit button[action=accountEditClose]': { click: this.accountEditClose }
         });
     },
@@ -40,10 +42,14 @@ Ext.define('admin.controller.AccountController', {
             store.load();
         }
     },
+    accountEditClose: function(button) {
+        button.up('window').close()
+    },
     accountDelete: function(button) {
         var grid = this.getAccountList(),
             record = grid.getSelectionModel().getSelection(),
             store = this.getStore('AccountStore');
+
         if (record.length <= 0) {
             Ext.Msg.alert('提示', '请选择您要删除的信息');
         } else {
@@ -53,10 +59,20 @@ Ext.define('admin.controller.AccountController', {
                     store.sync();
                     store.load();
                 }
-            })
+            });
         }
     },
-    accountEditClose: function(button) {
-        button.up('window').close()
+    accountSearch: function(button) {
+        var searchKey = Ext.getCmp('seakey').getValue();
+        if (!searchKey || searchKey === '') {
+            return;
+        }
+
+        var store = this.getStore('AccountStore');
+        store.load({
+            params: {
+                seakey: searchKey
+            }
+        });
     }
 });
