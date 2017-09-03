@@ -22,6 +22,7 @@ Ext.define('admin.view.account.List', {
         }, '-', {
             xtype: 'textfield',
             emptyText: '请输入查询关键词',
+            id: 'seakey',
             name: 'seakey'
         }, {
             text: '查询',
